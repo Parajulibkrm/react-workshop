@@ -6,7 +6,7 @@ const TweetBody = () => {
         src="https://placekitten.com/200/150"
         alt="Tweet Image"
         height={300}
-        width={300}
+        width={400}
       />
     </>
   );

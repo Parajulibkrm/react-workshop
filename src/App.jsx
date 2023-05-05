@@ -3,10 +3,10 @@ import Tweet from "./components/Tweet";
 const App = () => {
   return (
     <>
-      <Tweet />
-      <Tweet />
-      <Tweet />
-      <Tweet />
+      <Tweet name={"Bikram"} username={"@bikram"} />
+      <Tweet name="Hari" username="@hari" />
+      <Tweet name="Nabin" username="@nabin" />
+      <Tweet name="Kriti" username={"kriti"} />
     </>
   );
 };
