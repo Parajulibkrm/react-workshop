@@ -3,9 +3,7 @@ import { useState } from "react";
 const Footer = () => {
   const [count, setCount] = useState(0);
   const toggle = () => {
-    setCount(10);
-    setCount(10);
-    // setCount(count + 1);
+    setCount((count) => count + 1);
   };
 
   return (
