@@ -2,18 +2,13 @@ import Header from "./Header";
 import TweetBody from "./TweetBody";
 import Footer from "./Footer";
 
-const Tweet = ({ name, username }) => {
+const Tweet = ({ name, username, content, image, avatar }) => {
   return (
     <div className="tweet">
-      <img
-        src="https://placekitten.com/50/50"
-        alt="Profile Picture"
-        height={50}
-        width={50}
-      />
+      <img src={avatar} alt={name} height={50} width={50} />
       <div className="tweet-content">
         <Header name={name} username={username} />
-        <TweetBody />
+        <TweetBody content={content} image={image} />
         <Footer />
       </div>
     </div>

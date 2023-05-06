@@ -1,12 +1,35 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import Tweet from "./components/Tweet";
+import axios from "axios";
+import Navbar from "./components/Navbar";
+import CreateTweet from "./components/CreateTweet";
+
 const App = () => {
+  const [tweets, setTweets] = useState([]);
+  const fetchTweets = async () => {
+    const posts = await axios.get("https://react-workshop.fly.dev/");
+    setTweets(posts.data);
+  };
+  useEffect(() => {
+    fetchTweets();
+  }, []);
   return (
     <>
-      <Tweet name={"Bikram"} username={"@bikram"} />
-      <Tweet name="Hari" username="@hari" />
-      <Tweet name="Nabin" username="@nabin" />
-      <Tweet name="Kriti" username={"kriti"} />
+      <Navbar />
+      <CreateTweet />
+      {tweets.map((tweet) => {
+        return (
+          <Tweet
+            name={tweet.authorname}
+            username={tweet.authorname}
+            key={tweet.authorname}
+            avatar={tweet.avatar}
+            content={tweet.content}
+            image={tweet.image}
+          />
+        );
+      })}
     </>
   );
 };

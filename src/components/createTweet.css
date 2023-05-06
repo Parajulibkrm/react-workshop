@@ -1,0 +1,44 @@
+.tweet-create {
+  border: 1px solid #e6ecf0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+textarea {
+  border: none;
+  border-bottom: 1px solid #e6ecf0;
+  resize: none;
+  height: 100px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.tweet-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#char-count {
+  color: #657786;
+}
+
+#tweet-btn {
+  border: none;
+  background-color: #1da1f2;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#tweet-btn:hover {
+  background-color: #0d8bf0;
+}
